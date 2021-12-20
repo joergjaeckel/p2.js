@@ -1,5 +1,5 @@
 var Shape = require('./Shape')
-,    vec2 = require('../math/vec2')
+,    vec2 = require('../math/Vec2')
 ,    shallowClone = require('../utils/Utils').shallowClone;
 
 module.exports = Heightfield;

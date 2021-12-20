@@ -1,4 +1,4 @@
-var vec2 = require('../math/vec2');
+var vec2 = require('../math/Vec2');
 var Spring = require('./Spring');
 
 module.exports = LinearSpring;

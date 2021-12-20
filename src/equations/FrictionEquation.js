@@ -1,4 +1,4 @@
-var vec2 = require('../math/vec2')
+var vec2 = require('../math/Vec2')
 ,   Equation = require('./Equation');
 
 module.exports = FrictionEquation;

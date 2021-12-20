@@ -1,6 +1,6 @@
 module.exports = Equation;
 
-var vec2 = require('../math/vec2'),
+var vec2 = require('../math/Vec2'),
     scale = vec2.scale,
     multiply = vec2.multiply,
     createVec2 = vec2.create,

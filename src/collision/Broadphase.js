@@ -1,4 +1,4 @@
-var vec2 = require('../math/vec2');
+var vec2 = require('../math/Vec2');
 var Body = require('../objects/Body');
 
 module.exports = Broadphase;
@@ -68,8 +68,8 @@ Broadphase.prototype.getCollisionPairs = function(/*world*/){};
 /**
  * Check whether the bounding radius of two bodies overlap.
  * @method  boundingRadiusCheck
- * @param  {Body} bodyA
- * @param  {Body} bodyB
+ * @param  {Body.ts} bodyA
+ * @param  {Body.ts} bodyB
  * @return {Boolean}
  */
 Broadphase.boundingRadiusCheck = function(bodyA, bodyB){
@@ -81,8 +81,8 @@ Broadphase.boundingRadiusCheck = function(bodyA, bodyB){
 /**
  * Check whether the AABB of two bodies overlap.
  * @method  aabbCheck
- * @param  {Body} bodyA
- * @param  {Body} bodyB
+ * @param  {Body.ts} bodyA
+ * @param  {Body.ts} bodyB
  * @return {Boolean}
  */
 Broadphase.aabbCheck = function(bodyA, bodyB){
@@ -92,8 +92,8 @@ Broadphase.aabbCheck = function(bodyA, bodyB){
 /**
  * Check whether the bounding volumes of two bodies overlap.
  * @method  boundingVolumeCheck
- * @param  {Body} bodyA
- * @param  {Body} bodyB
+ * @param  {Body.ts} bodyA
+ * @param  {Body.ts} bodyB
  * @return {Boolean}
  */
 Broadphase.prototype.boundingVolumeCheck = function(bodyA, bodyB){
@@ -115,8 +115,8 @@ Broadphase.prototype.boundingVolumeCheck = function(bodyA, bodyB){
 /**
  * Check whether two bodies are allowed to collide at all.
  * @method  canCollide
- * @param  {Body} bodyA
- * @param  {Body} bodyB
+ * @param  {Body.ts} bodyA
+ * @param  {Body.ts} bodyB
  * @return {Boolean}
  */
 Broadphase.canCollide = function(bodyA, bodyB){

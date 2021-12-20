@@ -1,6 +1,6 @@
 var Shape = require('./Shape')
 ,   shallowClone = require('../utils/Utils').shallowClone
-,   vec2 = require('../math/vec2');
+,   vec2 = require('../math/Vec2');
 
 module.exports = Line;
 

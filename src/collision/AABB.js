@@ -1,4 +1,4 @@
-var vec2 = require('../math/vec2');
+var vec2 = require('../math/Vec2');
 
 module.exports = AABB;
 

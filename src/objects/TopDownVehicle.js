@@ -1,7 +1,7 @@
-var vec2 = require('../math/vec2');
+var vec2 = require('../math/Vec2');
 var Constraint = require('../constraints/Constraint');
 var FrictionEquation = require('../equations/FrictionEquation');
-var Body = require('../objects/Body');
+var Body = require('./Body');
 
 module.exports = TopDownVehicle;
 
@@ -11,7 +11,7 @@ module.exports = TopDownVehicle;
  *
  * @deprecated This class will be moved out of the core library in future versions.
  *
- * @param {Body} chassisBody A dynamic body, already added to the world.
+ * @param {Body.ts} chassisBody A dynamic body, already added to the world.
  * @param {Object} [options]
  *
  * @example
@@ -51,7 +51,7 @@ function TopDownVehicle(chassisBody, options){
     options = options || {};
 
     /**
-     * @property {Body} chassisBody
+     * @property {Body.ts} chassisBody
      */
     this.chassisBody = chassisBody;
 

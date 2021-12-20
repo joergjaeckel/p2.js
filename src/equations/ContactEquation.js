@@ -1,5 +1,5 @@
 var Equation = require("./Equation"),
-    vec2 = require('../math/vec2');
+    vec2 = require('../math/Vec2');
 
 module.exports = ContactEquation;
 

@@ -1,6 +1,6 @@
 var Shape = require('./Shape')
 ,   shallowClone = require('../utils/Utils').shallowClone
-,   copy = require('../math/vec2').copy;
+,   copy = require('../math/Vec2').copy;
 
 module.exports = Particle;
 

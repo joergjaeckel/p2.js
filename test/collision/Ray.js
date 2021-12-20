@@ -1,4 +1,4 @@
-var vec2 = require("../../src/math/vec2");
+var vec2 = require("../../src/math/Vec2");
 var Circle = require('../../src/shapes/Circle');
 var Plane = require('../../src/shapes/Plane');
 var Ray = require('../../src/collision/Ray');

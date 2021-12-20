@@ -1,5 +1,5 @@
 var Shape = require('./Shape')
-,   vec2 = require('../math/vec2')
+,   vec2 = require('../math/Vec2')
 ,   dot = vec2.dot
 ,   polyk = require('../math/polyk')
 ,   shallowClone = require('../utils/Utils').shallowClone;

@@ -1,5 +1,5 @@
 var  GSSolver = require('../solver/GSSolver')
-,    vec2 = require('../math/vec2')
+,    vec2 = require('../math/Vec2')
 ,    Shape = require('../shapes/Shape')
 ,    EventEmitter = require('../events/EventEmitter')
 ,    Body = require('../objects/Body')
@@ -247,7 +247,7 @@ var postStepEvent = {
 /**
  * Fired when a body is added to the world.
  * @event addBody
- * @param {Body} body
+ * @param {Body.ts} body
  */
 var addBodyEvent = {
     type : "addBody",
@@ -257,7 +257,7 @@ var addBodyEvent = {
 /**
  * Fired when a body is removed from the world.
  * @event removeBody
- * @param {Body} body
+ * @param {Body.ts} body
  */
 var removeBodyEvent = {
     type : "removeBody",
@@ -277,8 +277,8 @@ var addSpringEvent = {
 /**
  * Fired when a first contact is created between two bodies. This event is fired after the step has been done.
  * @event impact
- * @param {Body} bodyA
- * @param {Body} bodyB
+ * @param {Body.ts} bodyA
+ * @param {Body.ts} bodyB
  * @deprecated Impact event will be removed. Use beginContact instead.
  */
 var impactEvent = {
@@ -307,8 +307,8 @@ var postBroadphaseEvent = {
  * @event beginContact
  * @param {Shape} shapeA
  * @param {Shape} shapeB
- * @param {Body}  bodyA
- * @param {Body}  bodyB
+ * @param {Body.ts}  bodyA
+ * @param {Body.ts}  bodyB
  * @param {Array} contactEquations
  */
 var beginContactEvent = {
@@ -325,8 +325,8 @@ var beginContactEvent = {
  * @event endContact
  * @param {Shape} shapeA
  * @param {Shape} shapeB
- * @param {Body}  bodyA
- * @param {Body}  bodyB
+ * @param {Body.ts}  bodyA
+ * @param {Body.ts}  bodyB
  */
 var endContactEvent = {
     type: "endContact",
@@ -1001,7 +1001,7 @@ World.prototype.removeSpring = function(spring){
  * Also note that bodies can only be added to one World at a time.
  *
  * @method addBody
- * @param {Body} body
+ * @param {Body.ts} body
  *
  * @example
  *     var world = new World(),
@@ -1033,7 +1033,7 @@ World.prototype.addBody = function(body){
  * Also note that any constraints connected to the body must be removed before the body.
  *
  * @method removeBody
- * @param {Body} body
+ * @param {Body.ts} body
  *
  * @example
  *     var removeBody;
@@ -1095,7 +1095,7 @@ World.prototype.removeBody = function(body){
  * Get a body by its id.
  * @method getBodyById
  * @param {number} id
- * @return {Body} The body, or false if it was not found.
+ * @return {Body.ts} The body, or false if it was not found.
  */
 World.prototype.getBodyById = function(id){
     var bodies = this.bodies;
@@ -1111,8 +1111,8 @@ World.prototype.getBodyById = function(id){
 /**
  * Disable collision between two bodies
  * @method disableBodyCollision
- * @param {Body} bodyA
- * @param {Body} bodyB
+ * @param {Body.ts} bodyA
+ * @param {Body.ts} bodyB
  */
 World.prototype.disableBodyCollision = function(bodyA,bodyB){
     this.disabledBodyCollisionPairs.push(bodyA,bodyB);
@@ -1121,8 +1121,8 @@ World.prototype.disableBodyCollision = function(bodyA,bodyB){
 /**
  * Enable collisions between the given two bodies, if they were previously disabled using .disableBodyCollision().
  * @method enableBodyCollision
- * @param {Body} bodyA
- * @param {Body} bodyB
+ * @param {Body.ts} bodyA
+ * @param {Body.ts} bodyB
  */
 World.prototype.enableBodyCollision = function(bodyA,bodyB){
     var pairs = this.disabledBodyCollisionPairs;
